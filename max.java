@@ -11,17 +11,17 @@ class max {
             
             int max = i;
             
-            for (j = i-1; j>=0; j--) {
+            for (j = i-1; j>=0; j--) {      //From R-L, search for numbers greater than element @ tab[tab.length-1]
                 if (tab[j]>tab[max]) {
-                max = j;
+                max = j;                    //Save largest number's position as max
                 }
             }
 
             if (max != i){
-                int x = tab[i];
+                int x = tab[i];             //Swap max with start position, so that tab[tab.length-1] is highest number
                 tab[i] = tab[max];
                 tab[max] = x;
-                System.out.println(Arrays.toString(tab));
+                System.out.println(Arrays.toString(tab));   //Print out to see all swaps
             }
             
         }
